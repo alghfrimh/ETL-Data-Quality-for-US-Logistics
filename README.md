@@ -3,7 +3,7 @@
 ## Repository Outline
 
 ```
-p2-ftds030-hck-m3-alghfrimh
+ETL-Data-Quality-for-US-Logistics
 │
 ├── /dags                                       # DAG scripts
 │   └── P2M3_muhammad_al_ghifari_DAG.py         # ETL pipeline DAG
