@@ -1,0 +1,49 @@
+[2025-08-29T18:50:30.476+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-06-28T02:20:00+00:00 [queued]>
+[2025-08-29T18:50:31.863+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-06-28T02:20:00+00:00 [queued]>
+[2025-08-29T18:50:31.934+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-29T18:50:31.967+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-08-29T18:50:31.970+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-29T18:50:32.322+0000] {taskinstance.py:1389} INFO - Executing <Task(_PythonDecoratedOperator): preprocess_data> on 2025-06-28 02:20:00+00:00
+[2025-08-29T18:50:32.473+0000] {standard_task_runner.py:52} INFO - Started process 442 to run task
+[2025-08-29T18:50:33.205+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_P2M3_muhammad_al_ghifari', 'preprocess_data', 'scheduled__2025-06-28T02:20:00+00:00', '--job-id', '245', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_muhammad_al_ghifari_DAG.py', '--cfg-path', '/tmp/tmppjjkunsv', '--error-file', '/tmp/tmprkn8447x']
+[2025-08-29T18:50:33.496+0000] {standard_task_runner.py:80} INFO - Job 245: Subtask preprocess_data
+[2025-08-29T18:50:40.024+0000] {task_command.py:371} INFO - Running <TaskInstance: etl_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-06-28T02:20:00+00:00 [running]> on host b40c5a90b1e4
+[2025-08-29T18:51:07.091+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Muhammad Al Ghifari
+AIRFLOW_CTX_DAG_ID=etl_P2M3_muhammad_al_ghifari
+AIRFLOW_CTX_TASK_ID=preprocess_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-06-28T02:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-06-28T02:20:00+00:00
+[2025-08-29T18:51:12.878+0000] {local_task_job.py:84} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-08-29T18:51:14.155+0000] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 442. PIDs of all processes in the group: [442]
+[2025-08-29T18:51:14.280+0000] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 442
+[2025-08-29T18:51:14.382+0000] {taskinstance.py:1553} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-08-29T18:51:15.021+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py", line 120, in preprocess_data
+    obj = df.select_dtypes('object').columns
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 4344, in select_dtypes
+    unique_dtypes = self.dtypes.unique()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 5659, in dtypes
+    return self._constructor_sliced(data, index=self._info_axis, dtype=np.object_)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/series.py", line 449, in __init__
+    self._set_axis(0, index, fastpath=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/series.py", line 556, in _set_axis
+    object.__setattr__(self, "_index", labels)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1555, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2025-08-29T18:51:15.469+0000] {taskinstance.py:1412} INFO - Marking task as FAILED. dag_id=etl_P2M3_muhammad_al_ghifari, task_id=preprocess_data, execution_date=20250628T022000, start_date=20250829T185030, end_date=20250829T185115
+[2025-08-29T18:51:16.159+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 245 for task preprocess_data (Task received SIGTERM signal; 442)
+[2025-08-29T18:51:16.282+0000] {process_utils.py:75} INFO - Process psutil.Process(pid=442, status='terminated', exitcode=1, started='18:50:32') (442) terminated with exit code 1
+[2025-08-29T18:51:16.355+0000] {local_task_job.py:156} INFO - Task exited with return code 143
+[2025-08-29T18:51:17.346+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

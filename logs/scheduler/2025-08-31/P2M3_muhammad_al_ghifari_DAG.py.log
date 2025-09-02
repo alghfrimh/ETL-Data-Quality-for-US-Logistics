@@ -1,0 +1,21 @@
+[2025-08-31T15:03:26.354+0000] {processor.py:153} INFO - Started process (PID=193) to work on /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py
+[2025-08-31T15:03:26.355+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py for tasks to queue
+[2025-08-31T15:03:26.355+0000] {logging_mixin.py:115} INFO - [2025-08-31T15:03:26.355+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py
+[2025-08-31T15:03:26.803+0000] {processor.py:650} INFO - DAG(s) dict_keys(['ETL_P2M3_muhammad_al_ghifari']) retrieved from /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py
+[2025-08-31T15:03:26.858+0000] {logging_mixin.py:115} INFO - [2025-08-31T15:03:26.857+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-08-31T15:03:26.884+0000] {logging_mixin.py:115} INFO - [2025-08-31T15:03:26.883+0000] {dag.py:2981} INFO - Setting next_dagrun for ETL_P2M3_muhammad_al_ghifari to 2025-08-30T02:30:00+00:00, run_after=2025-09-06T02:10:00+00:00
+[2025-08-31T15:03:26.899+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py took 0.549 seconds
+[2025-08-31T15:03:57.519+0000] {processor.py:153} INFO - Started process (PID=200) to work on /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py
+[2025-08-31T15:03:57.521+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py for tasks to queue
+[2025-08-31T15:03:57.522+0000] {logging_mixin.py:115} INFO - [2025-08-31T15:03:57.522+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py
+[2025-08-31T15:03:58.080+0000] {processor.py:650} INFO - DAG(s) dict_keys(['ETL_P2M3_muhammad_al_ghifari']) retrieved from /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py
+[2025-08-31T15:03:58.100+0000] {logging_mixin.py:115} INFO - [2025-08-31T15:03:58.100+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-08-31T15:03:58.119+0000] {logging_mixin.py:115} INFO - [2025-08-31T15:03:58.119+0000] {dag.py:2981} INFO - Setting next_dagrun for ETL_P2M3_muhammad_al_ghifari to 2025-08-30T02:30:00+00:00, run_after=2025-09-06T02:10:00+00:00
+[2025-08-31T15:03:58.126+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py took 0.616 seconds
+[2025-08-31T15:04:28.361+0000] {processor.py:153} INFO - Started process (PID=206) to work on /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py
+[2025-08-31T15:04:28.363+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py for tasks to queue
+[2025-08-31T15:04:28.364+0000] {logging_mixin.py:115} INFO - [2025-08-31T15:04:28.364+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py
+[2025-08-31T15:04:28.844+0000] {processor.py:650} INFO - DAG(s) dict_keys(['ETL_P2M3_muhammad_al_ghifari']) retrieved from /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py
+[2025-08-31T15:04:28.867+0000] {logging_mixin.py:115} INFO - [2025-08-31T15:04:28.866+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-08-31T15:04:28.883+0000] {logging_mixin.py:115} INFO - [2025-08-31T15:04:28.883+0000] {dag.py:2981} INFO - Setting next_dagrun for ETL_P2M3_muhammad_al_ghifari to 2025-08-30T02:30:00+00:00, run_after=2025-09-06T02:10:00+00:00
+[2025-08-31T15:04:28.888+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py took 0.534 seconds

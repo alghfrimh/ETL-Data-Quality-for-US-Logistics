@@ -1,0 +1,24 @@
+[2025-08-29T18:46:52.947+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.extract scheduled__2025-05-17T02:30:00+00:00 [queued]>
+[2025-08-29T18:46:53.481+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.extract scheduled__2025-05-17T02:30:00+00:00 [queued]>
+[2025-08-29T18:46:53.483+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-29T18:46:53.484+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-08-29T18:46:53.489+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-29T18:46:53.631+0000] {taskinstance.py:1389} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2025-05-17 02:30:00+00:00
+[2025-08-29T18:46:53.890+0000] {standard_task_runner.py:52} INFO - Started process 239 to run task
+[2025-08-29T18:46:53.937+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_P2M3_muhammad_al_ghifari', 'extract', 'scheduled__2025-05-17T02:30:00+00:00', '--job-id', '191', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_muhammad_al_ghifari_DAG.py', '--cfg-path', '/tmp/tmpstk4ww_q', '--error-file', '/tmp/tmptjoti9cs']
+[2025-08-29T18:46:53.982+0000] {standard_task_runner.py:80} INFO - Job 191: Subtask extract
+[2025-08-29T18:46:56.468+0000] {task_command.py:371} INFO - Running <TaskInstance: etl_P2M3_muhammad_al_ghifari.extract scheduled__2025-05-17T02:30:00+00:00 [running]> on host b40c5a90b1e4
+[2025-08-29T18:47:03.152+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Muhammad Al Ghifari
+AIRFLOW_CTX_DAG_ID=etl_P2M3_muhammad_al_ghifari
+AIRFLOW_CTX_TASK_ID=extract
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-17T02:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-05-17T02:30:00+00:00
+[2025-08-29T18:47:05.463+0000] {logging_mixin.py:115} INFO - Success INSERT
+[2025-08-29T18:47:05.580+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-08-29T18:47:06.423+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=etl_P2M3_muhammad_al_ghifari, task_id=extract, execution_date=20250517T023000, start_date=20250829T184653, end_date=20250829T184706
+[2025-08-29T18:47:07.010+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-08-29T18:47:07.878+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

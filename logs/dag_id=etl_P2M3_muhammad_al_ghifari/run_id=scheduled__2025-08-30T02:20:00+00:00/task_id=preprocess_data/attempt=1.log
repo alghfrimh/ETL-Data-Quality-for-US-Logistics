@@ -1,0 +1,96 @@
+[2025-08-30T03:35:23.846+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-08-30T02:20:00+00:00 [queued]>
+[2025-08-30T03:35:23.865+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-08-30T02:20:00+00:00 [queued]>
+[2025-08-30T03:35:23.867+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-30T03:35:23.868+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-08-30T03:35:23.869+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-30T03:35:23.893+0000] {taskinstance.py:1389} INFO - Executing <Task(_PythonDecoratedOperator): preprocess_data> on 2025-08-30 02:20:00+00:00
+[2025-08-30T03:35:23.917+0000] {standard_task_runner.py:52} INFO - Started process 234 to run task
+[2025-08-30T03:35:23.921+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_P2M3_muhammad_al_ghifari', 'preprocess_data', 'scheduled__2025-08-30T02:20:00+00:00', '--job-id', '287', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_muhammad_al_ghifari_DAG.py', '--cfg-path', '/tmp/tmpnk68n2y8', '--error-file', '/tmp/tmp0cxg1qhi']
+[2025-08-30T03:35:23.923+0000] {standard_task_runner.py:80} INFO - Job 287: Subtask preprocess_data
+[2025-08-30T03:35:24.110+0000] {task_command.py:371} INFO - Running <TaskInstance: etl_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-08-30T02:20:00+00:00 [running]> on host 17bf1ffece81
+[2025-08-30T03:35:24.307+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Muhammad Al Ghifari
+AIRFLOW_CTX_DAG_ID=etl_P2M3_muhammad_al_ghifari
+AIRFLOW_CTX_TASK_ID=preprocess_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-08-30T02:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-08-30T02:20:00+00:00
+[2025-08-30T03:35:24.406+0000] {logging_mixin.py:115} INFO - Preprocessed data is Success
+[2025-08-30T03:35:24.419+0000] {logging_mixin.py:115} INFO -    unnamed_0 shipment_id  ... distance_miles transit_days
+0          0     SH10000  ...            291            2
+1          1     SH10001  ...           1225            3
+2          2     SH10002  ...            220            2
+3          3     SH10003  ...           1156            9
+4          4     SH10004  ...           1017            3
+
+[5 rows x 12 columns]
+[2025-08-30T03:35:24.457+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-08-30T03:35:24.490+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=etl_P2M3_muhammad_al_ghifari, task_id=preprocess_data, execution_date=20250830T022000, start_date=20250830T033523, end_date=20250830T033524
+[2025-08-30T03:35:24.510+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-08-30T03:35:24.653+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-30T06:12:48.942+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-08-30T02:20:00+00:00 [queued]>
+[2025-08-30T06:12:48.951+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-08-30T02:20:00+00:00 [queued]>
+[2025-08-30T06:12:48.951+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-30T06:12:48.951+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-08-30T06:12:48.952+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-30T06:12:48.960+0000] {taskinstance.py:1389} INFO - Executing <Task(_PythonDecoratedOperator): preprocess_data> on 2025-08-30 02:20:00+00:00
+[2025-08-30T06:12:48.972+0000] {standard_task_runner.py:52} INFO - Started process 223 to run task
+[2025-08-30T06:12:48.982+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_P2M3_muhammad_al_ghifari', 'preprocess_data', 'scheduled__2025-08-30T02:20:00+00:00', '--job-id', '297', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_muhammad_al_ghifari_DAG.py', '--cfg-path', '/tmp/tmpcxoardw0', '--error-file', '/tmp/tmpi5htr0pz']
+[2025-08-30T06:12:48.984+0000] {standard_task_runner.py:80} INFO - Job 297: Subtask preprocess_data
+[2025-08-30T06:12:49.085+0000] {task_command.py:371} INFO - Running <TaskInstance: etl_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-08-30T02:20:00+00:00 [running]> on host 5d6b1c2cab16
+[2025-08-30T06:12:49.222+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Muhammad Al Ghifari
+AIRFLOW_CTX_DAG_ID=etl_P2M3_muhammad_al_ghifari
+AIRFLOW_CTX_TASK_ID=preprocess_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-08-30T02:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-08-30T02:20:00+00:00
+[2025-08-30T06:12:49.297+0000] {logging_mixin.py:115} INFO - Preprocessed data is Success
+[2025-08-30T06:12:49.313+0000] {logging_mixin.py:115} INFO -    unnamed_0 shipment_id  ... distance_miles transit_days
+0          0     SH10000  ...            291            2
+1          1     SH10001  ...           1225            3
+2          2     SH10002  ...            220            2
+3          3     SH10003  ...           1156            9
+4          4     SH10004  ...           1017            3
+
+[5 rows x 12 columns]
+[2025-08-30T06:12:49.411+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-08-30T06:12:49.459+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=etl_P2M3_muhammad_al_ghifari, task_id=preprocess_data, execution_date=20250830T022000, start_date=20250830T061248, end_date=20250830T061249
+[2025-08-30T06:12:49.533+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-08-30T06:12:49.659+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-30T13:28:37.332+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: ETL_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-08-30T02:20:00+00:00 [queued]>
+[2025-08-30T13:28:37.338+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: ETL_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-08-30T02:20:00+00:00 [queued]>
+[2025-08-30T13:28:37.338+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-30T13:28:37.338+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-08-30T13:28:37.338+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-30T13:28:37.345+0000] {taskinstance.py:1389} INFO - Executing <Task(_PythonDecoratedOperator): preprocess_data> on 2025-08-30 02:20:00+00:00
+[2025-08-30T13:28:37.350+0000] {standard_task_runner.py:52} INFO - Started process 445 to run task
+[2025-08-30T13:28:37.352+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_P2M3_muhammad_al_ghifari', 'preprocess_data', 'scheduled__2025-08-30T02:20:00+00:00', '--job-id', '312', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_muhammad_al_ghifari_DAG.py', '--cfg-path', '/tmp/tmp9xt759zs', '--error-file', '/tmp/tmp2f15tr0z']
+[2025-08-30T13:28:37.356+0000] {standard_task_runner.py:80} INFO - Job 312: Subtask preprocess_data
+[2025-08-30T13:28:37.417+0000] {task_command.py:371} INFO - Running <TaskInstance: ETL_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-08-30T02:20:00+00:00 [running]> on host 6d024bb18c43
+[2025-08-30T13:28:37.467+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Muhammad Al Ghifari
+AIRFLOW_CTX_DAG_ID=ETL_P2M3_muhammad_al_ghifari
+AIRFLOW_CTX_TASK_ID=preprocess_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-08-30T02:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-08-30T02:20:00+00:00
+[2025-08-30T13:28:37.525+0000] {logging_mixin.py:115} INFO - Preprocessed data is Success
+[2025-08-30T13:28:37.554+0000] {logging_mixin.py:115} INFO -   shipment_id origin_warehouse  ... distance_miles transit_days
+0     SH10000    Warehouse_MIA  ...            291            2
+1     SH10001    Warehouse_MIA  ...           1225            3
+2     SH10002     Warehouse_LA  ...            220            2
+3     SH10003    Warehouse_BOS  ...           1156            9
+4     SH10004     Warehouse_SF  ...           1017            3
+
+[5 rows x 11 columns]
+[2025-08-30T13:28:37.587+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-08-30T13:28:37.602+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=ETL_P2M3_muhammad_al_ghifari, task_id=preprocess_data, execution_date=20250830T022000, start_date=20250830T132837, end_date=20250830T132837
+[2025-08-30T13:28:37.619+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-08-30T13:28:37.647+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

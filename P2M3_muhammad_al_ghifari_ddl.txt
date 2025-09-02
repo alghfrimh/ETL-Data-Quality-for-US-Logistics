@@ -1,0 +1,50 @@
+===========================================
+PREFACE
+===========================================
+This program is aims to create tables and insert the dataset into a PostgreSQL database.
+
+
+===========================================
+URL DATASET
+===========================================
+Dataset URL: https://www.kaggle.com/datasets/shahriarkabir/us-logistics-performance-dataset
+
+===========================================
+Data Definition Language Syntax
+===========================================
+Defines the structure of the `table_m3`, specifying columns, data types, and constraints using `CREATE TABLE`.
+
+CREATE TABLE table_m3(
+    "Shipment_ID" TEXT PRIMARY KEY,         -- Sebagai Primary Key (identifier dari dataset logistics)
+    "Origin_Warehouse" TEXT NOT NULL,       -- Gudang asal
+    "Destination" TEXT NOT NULL,            -- Tujuan pengiriman
+    "Carrier" TEXT NOT NULL,                -- Penyedia jasa pengiriman
+    "Shipment_Date"  TEXT NOT NULL,         -- Tanggal pengiriman
+    "Delivery_Date" TEXT NULL,              -- Tanggal sampai (Terdapat missing values)
+    "Weight_kg" DOUBLE PRECISION NOT NULL,  -- Berat package (Double Precision tipe data float64 agar nilainya tetap float asli tanpa hilang presisi)
+    "Cost" DOUBLE PRECISION NULL,           -- Biaya pengiriman (Terdapat missing values)
+    "Status" TEXT NOT NULL,                 -- Status pengiriman
+    "Distance_miles" INTEGER NOT NULL,      -- Jarak pengiriman (bilangan bulat)
+    "Transit_Days" INTEGER NOT NULL         -- Lama transit (hari, bilangan bulat)
+);
+
+===========================================
+Data Manipulation Language Syntax
+===========================================
+Inserts data from a CSV file into the `table_m3` using `COPY`.
+
+COPY table_m3(
+  "Shipment_ID","Origin_Warehouse","Destination","Carrier",
+  "Shipment_Date","Delivery_Date","Weight_kg","Cost",
+  "Status","Distance_miles","Transit_Days"
+)
+FROM '/tmp/P2M3_muhammad_al_ghifari_data_raw.csv'
+WITH (
+  FORMAT csv,
+  HEADER true,
+  DELIMITER ',',
+  NULL '',                             -- Missing Values (standar CSV)
+  QUOTE '"',
+  ESCAPE '"',
+  FORCE_NULL ("Delivery_Date","Cost")  -- "" (quoted empty) → NULL juga
+);

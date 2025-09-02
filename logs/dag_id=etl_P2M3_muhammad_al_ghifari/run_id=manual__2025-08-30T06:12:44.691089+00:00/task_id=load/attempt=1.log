@@ -1,0 +1,92 @@
+[2025-08-30T06:12:50.979+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.load manual__2025-08-30T06:12:44.691089+00:00 [queued]>
+[2025-08-30T06:12:50.990+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.load manual__2025-08-30T06:12:44.691089+00:00 [queued]>
+[2025-08-30T06:12:50.990+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-30T06:12:50.990+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-08-30T06:12:50.990+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-30T06:12:51.000+0000] {taskinstance.py:1389} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2025-08-30 06:12:44.691089+00:00
+[2025-08-30T06:12:51.012+0000] {standard_task_runner.py:52} INFO - Started process 236 to run task
+[2025-08-30T06:12:51.018+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_P2M3_muhammad_al_ghifari', 'load', 'manual__2025-08-30T06:12:44.691089+00:00', '--job-id', '299', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_muhammad_al_ghifari_DAG.py', '--cfg-path', '/tmp/tmp_pqp3dvu', '--error-file', '/tmp/tmpsq3nufb0']
+[2025-08-30T06:12:51.020+0000] {standard_task_runner.py:80} INFO - Job 299: Subtask load
+[2025-08-30T06:12:51.126+0000] {task_command.py:371} INFO - Running <TaskInstance: etl_P2M3_muhammad_al_ghifari.load manual__2025-08-30T06:12:44.691089+00:00 [running]> on host 5d6b1c2cab16
+[2025-08-30T06:12:51.326+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Muhammad Al Ghifari
+AIRFLOW_CTX_DAG_ID=etl_P2M3_muhammad_al_ghifari
+AIRFLOW_CTX_TASK_ID=load
+AIRFLOW_CTX_EXECUTION_DATE=2025-08-30T06:12:44.691089+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-08-30T06:12:44.691089+00:00
+[2025-08-30T06:12:51.391+0000] {base.py:271} INFO - HEAD http://elasticsearch:9200/ [status:200 request:0.050s]
+[2025-08-30T06:12:51.392+0000] {logging_mixin.py:115} INFO - True
+[2025-08-30T06:12:51.659+0000] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/elasticsearch/connection/base.py:208 ElasticsearchWarning: [types removal] Specifying types in document index requests is deprecated, use the typeless endpoints instead (/{index}/_doc/{id}, /{index}/_doc, or /{index}/_create/{id}).
+[2025-08-30T06:12:51.661+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10000_20231002 [status:201 request:0.135s]
+[2025-08-30T06:12:51.685+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10001_20231206 [status:200 request:0.021s]
+[2025-08-30T06:12:51.707+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10002_20230918 [status:200 request:0.020s]
+[2025-08-30T06:12:51.725+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10003_20230126 [status:200 request:0.017s]
+[2025-08-30T06:12:51.737+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10004_20230603 [status:200 request:0.010s]
+[2025-08-30T06:12:51.755+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10005_20230913 [status:200 request:0.017s]
+[2025-08-30T06:12:51.773+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10006_20231019 [status:200 request:0.016s]
+[2025-08-30T06:12:51.794+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10007_20230227 [status:200 request:0.019s]
+[2025-08-30T06:12:51.814+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10008_20231124 [status:200 request:0.016s]
+[2025-08-30T06:12:51.821+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10009_20230119 [status:200 request:0.006s]
+[2025-08-30T06:12:51.826+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10010_20230202 [status:200 request:0.004s]
+[2025-08-30T06:12:51.833+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10011_20230528 [status:200 request:0.007s]
+[2025-08-30T06:12:51.840+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10012_20230808 [status:200 request:0.006s]
+[2025-08-30T06:12:51.844+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10013_20231228 [status:200 request:0.003s]
+[2025-08-30T06:12:51.848+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10014_20230724 [status:200 request:0.004s]
+[2025-08-30T06:12:51.854+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10015_20230510 [status:200 request:0.006s]
+[2025-08-30T06:12:51.861+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10016_20230125 [status:200 request:0.006s]
+[2025-08-30T06:12:51.870+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10017_20230608 [status:200 request:0.008s]
+[2025-08-30T06:12:51.878+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10018_20231016 [status:200 request:0.007s]
+[2025-08-30T06:12:51.890+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10019_20230116 [status:200 request:0.010s]
+[2025-08-30T06:12:51.899+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10020_20230810 [status:200 request:0.007s]
+[2025-08-30T06:12:51.904+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10021_20230823 [status:200 request:0.005s]
+[2025-08-30T06:12:51.913+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10022_20230721 [status:200 request:0.008s]
+[2025-08-30T06:12:51.922+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10023_20231026 [status:200 request:0.008s]
+[2025-08-30T06:12:51.932+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10024_20230811 [status:200 request:0.008s]
+[2025-08-30T06:12:51.940+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10025_20230427 [status:200 request:0.007s]
+[2025-08-30T06:12:51.948+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10026_20231230 [status:200 request:0.007s]
+[2025-08-30T06:12:51.955+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10027_20231230 [status:200 request:0.006s]
+[2025-08-30T06:12:51.966+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10028_20231215 [status:200 request:0.009s]
+[2025-08-30T06:12:51.972+0000] {base.py:271} INFO - PUT http://elasticsearch:9200/logistics_project/doc/SH10029_20230627 [status:200 request:0.005s]
+[2025-08-30T06:12:51.974+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/elasticsearch/serializer.py", line 131, in dumps
+    data, default=self.default, ensure_ascii=False, separators=(",", ":")
+  File "/usr/local/lib/python3.7/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/local/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/airflow/.local/lib/python3.7/site-packages/elasticsearch/serializer.py", line 116, in default
+    raise TypeError("Unable to serialize %r (type: %s)" % (data, type(data)))
+TypeError: Unable to serialize NaT (type: <class 'pandas._libs.tslibs.nattype.NaTType'>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py", line 183, in load
+    body=row.to_dict())
+  File "/home/airflow/.local/lib/python3.7/site-packages/elasticsearch/client/utils.py", line 168, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/elasticsearch/client/__init__.py", line 411, in index
+    body=body,
+  File "/home/airflow/.local/lib/python3.7/site-packages/elasticsearch/transport.py", line 374, in perform_request
+    method, headers, params, body
+  File "/home/airflow/.local/lib/python3.7/site-packages/elasticsearch/transport.py", line 439, in _resolve_request_args
+    body = self.serializer.dumps(body)
+  File "/home/airflow/.local/lib/python3.7/site-packages/elasticsearch/serializer.py", line 134, in dumps
+    raise SerializationError(data, e)
+elasticsearch.exceptions.SerializationError: ({'unnamed_0': 30, 'shipment_id': 'SH10030', 'origin_warehouse': 'Warehouse_SF', 'destination': 'San Francisco', 'carrier': 'LaserShip', 'shipment_date': Timestamp('2023-11-04 00:00:00'), 'delivery_date': NaT, 'weight_kg': 28.5, 'cost': 109.33, 'status': 'Delivered', 'distance_miles': 502, 'transit_days': 2}, TypeError("Unable to serialize NaT (type: <class 'pandas._libs.tslibs.nattype.NaTType'>)"))
+[2025-08-30T06:12:52.032+0000] {taskinstance.py:1412} INFO - Marking task as FAILED. dag_id=etl_P2M3_muhammad_al_ghifari, task_id=load, execution_date=20250830T061244, start_date=20250830T061250, end_date=20250830T061252
+[2025-08-30T06:12:52.058+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 299 for task load (({'unnamed_0': 30, 'shipment_id': 'SH10030', 'origin_warehouse': 'Warehouse_SF', 'destination': 'San Francisco', 'carrier': 'LaserShip', 'shipment_date': Timestamp('2023-11-04 00:00:00'), 'delivery_date': NaT, 'weight_kg': 28.5, 'cost': 109.33, 'status': 'Delivered', 'distance_miles': 502, 'transit_days': 2}, TypeError("Unable to serialize NaT (type: <class 'pandas._libs.tslibs.nattype.NaTType'>)")); 236)
+[2025-08-30T06:12:52.126+0000] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-08-30T06:12:52.206+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

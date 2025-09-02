@@ -1,0 +1,39 @@
+[2025-08-29T18:44:57.318+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.extract scheduled__2025-05-10T02:10:00+00:00 [queued]>
+[2025-08-29T18:44:57.612+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.extract scheduled__2025-05-10T02:10:00+00:00 [queued]>
+[2025-08-29T18:44:57.638+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-29T18:44:57.654+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-08-29T18:44:57.663+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-29T18:44:57.881+0000] {local_task_job.py:84} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-08-29T18:44:57.923+0000] {local_task_job.py:156} INFO - Task exited with return code 143
+[2025-08-29T18:44:59.582+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-29T18:45:00.600+0000] {taskinstance.py:1389} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2025-05-10 02:10:00+00:00
+[2025-08-29T18:45:00.977+0000] {standard_task_runner.py:52} INFO - Started process 888 to run task
+[2025-08-29T18:45:01.074+0000] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 888. PIDs of all processes in the group: [888]
+[2025-08-29T18:45:01.083+0000] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 888
+[2025-08-29T18:45:01.121+0000] {process_utils.py:75} INFO - Process psutil.Process(pid=888, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='18:45:00') (888) terminated with exit code Negsignal.SIGTERM
+[2025-08-29T18:46:48.813+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.extract scheduled__2025-05-10T02:10:00+00:00 [queued]>
+[2025-08-29T18:46:48.987+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.extract scheduled__2025-05-10T02:10:00+00:00 [queued]>
+[2025-08-29T18:46:48.989+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-29T18:46:48.991+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-08-29T18:46:49.030+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-29T18:46:49.284+0000] {taskinstance.py:1389} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2025-05-10 02:10:00+00:00
+[2025-08-29T18:46:49.829+0000] {standard_task_runner.py:52} INFO - Started process 233 to run task
+[2025-08-29T18:46:49.925+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_P2M3_muhammad_al_ghifari', 'extract', 'scheduled__2025-05-10T02:10:00+00:00', '--job-id', '184', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_muhammad_al_ghifari_DAG.py', '--cfg-path', '/tmp/tmp38rximf9', '--error-file', '/tmp/tmpb4yx70dm']
+[2025-08-29T18:46:49.960+0000] {standard_task_runner.py:80} INFO - Job 184: Subtask extract
+[2025-08-29T18:46:53.539+0000] {task_command.py:371} INFO - Running <TaskInstance: etl_P2M3_muhammad_al_ghifari.extract scheduled__2025-05-10T02:10:00+00:00 [running]> on host b40c5a90b1e4
+[2025-08-29T18:46:55.813+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Muhammad Al Ghifari
+AIRFLOW_CTX_DAG_ID=etl_P2M3_muhammad_al_ghifari
+AIRFLOW_CTX_TASK_ID=extract
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-10T02:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-05-10T02:10:00+00:00
+[2025-08-29T18:46:57.135+0000] {logging_mixin.py:115} INFO - Success INSERT
+[2025-08-29T18:46:57.256+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-08-29T18:46:57.905+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=etl_P2M3_muhammad_al_ghifari, task_id=extract, execution_date=20250510T021000, start_date=20250829T184648, end_date=20250829T184657
+[2025-08-29T18:46:58.978+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-08-29T18:47:02.309+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,81 @@
+[2025-08-29T18:50:29.564+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-06-28T02:30:00+00:00 [queued]>
+[2025-08-29T18:50:29.847+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: etl_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-06-28T02:30:00+00:00 [queued]>
+[2025-08-29T18:50:29.857+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-29T18:50:29.859+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-08-29T18:50:29.864+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-08-29T18:50:30.774+0000] {taskinstance.py:1389} INFO - Executing <Task(_PythonDecoratedOperator): preprocess_data> on 2025-06-28 02:30:00+00:00
+[2025-08-29T18:50:31.036+0000] {standard_task_runner.py:52} INFO - Started process 439 to run task
+[2025-08-29T18:50:31.559+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_P2M3_muhammad_al_ghifari', 'preprocess_data', 'scheduled__2025-06-28T02:30:00+00:00', '--job-id', '240', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_muhammad_al_ghifari_DAG.py', '--cfg-path', '/tmp/tmpz65ve1_6', '--error-file', '/tmp/tmpv1zs9ryg']
+[2025-08-29T18:50:31.807+0000] {standard_task_runner.py:80} INFO - Job 240: Subtask preprocess_data
+[2025-08-29T18:50:39.392+0000] {task_command.py:371} INFO - Running <TaskInstance: etl_P2M3_muhammad_al_ghifari.preprocess_data scheduled__2025-06-28T02:30:00+00:00 [running]> on host b40c5a90b1e4
+[2025-08-29T18:51:04.549+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Muhammad Al Ghifari
+AIRFLOW_CTX_DAG_ID=etl_P2M3_muhammad_al_ghifari
+AIRFLOW_CTX_TASK_ID=preprocess_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-06-28T02:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-06-28T02:30:00+00:00
+[2025-08-29T18:51:12.279+0000] {local_task_job.py:84} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-08-29T18:51:13.521+0000] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 439. PIDs of all processes in the group: [439]
+[2025-08-29T18:51:13.984+0000] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 439
+[2025-08-29T18:51:14.059+0000] {taskinstance.py:1553} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-08-29T18:51:15.123+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/P2M3_muhammad_al_ghifari_DAG.py", line 141, in preprocess_data
+    df = df.drop_duplicates()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 6065, in drop_duplicates
+    result = self[-duplicated]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 3449, in __getitem__
+    return self._getitem_bool_array(key)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 3504, in _getitem_bool_array
+    return self._take_with_is_copy(indexer, axis=0)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 3628, in _take_with_is_copy
+    result = self.take(indices=indices, axis=axis)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 3616, in take
+    indices, axis=self._get_block_manager_axis(axis), verify=True
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/internals/managers.py", line 870, in take
+    consolidate=False,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/internals/managers.py", line 688, in reindex_indexer
+    for blk in self.blocks
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/internals/managers.py", line 688, in <listcomp>
+    for blk in self.blocks
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/internals/blocks.py", line 1145, in take_nd
+    values, indexer, axis=axis, allow_fill=allow_fill, fill_value=fill_value
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/array_algos/take.py", line 102, in take_nd
+    indexer, fill_value=fill_value, allow_fill=allow_fill, axis=axis
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/_mixins.py", line 106, in take
+    axis=axis,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/algorithms.py", line 1512, in take
+    arr, indices, axis=axis, allow_fill=True, fill_value=fill_value
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/array_algos/take.py", line 108, in take_nd
+    return _take_nd_ndarray(arr, indexer, axis, fill_value, allow_fill)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/array_algos/take.py", line 152, in _take_nd_ndarray
+    arr.ndim, arr.dtype, out.dtype, axis=axis, mask_info=mask_info
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/array_algos/take.py", line 311, in _get_take_nd_function
+    func = _get_take_nd_function_cached(ndim, arr_dtype, out_dtype, axis)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/array_algos/take.py", line 275, in _get_take_nd_function_cached
+    tup = (arr_dtype.name, out_dtype.name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/_dtype.py", line 335, in _name_get
+    if _name_includes_bit_suffix(dtype):
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/_dtype.py", line 314, in _name_includes_bit_suffix
+    elif np.issubdtype(dtype, np.flexible) and _isunsized(dtype):
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/numerictypes.py", line 417, in issubdtype
+    if not issubclass_(arg1, generic):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1555, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2025-08-29T18:51:15.490+0000] {taskinstance.py:1412} INFO - Marking task as FAILED. dag_id=etl_P2M3_muhammad_al_ghifari, task_id=preprocess_data, execution_date=20250628T023000, start_date=20250829T185029, end_date=20250829T185115
+[2025-08-29T18:51:16.239+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 240 for task preprocess_data (Task received SIGTERM signal; 439)
+[2025-08-29T18:51:16.404+0000] {process_utils.py:75} INFO - Process psutil.Process(pid=439, status='terminated', exitcode=1, started='18:50:30') (439) terminated with exit code 1
+[2025-08-29T18:51:16.505+0000] {local_task_job.py:156} INFO - Task exited with return code 143
+[2025-08-29T18:51:17.515+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

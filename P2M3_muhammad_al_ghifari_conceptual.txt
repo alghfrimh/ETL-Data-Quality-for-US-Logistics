@@ -1,0 +1,75 @@
+1. Jelaskan apa yang dimaksud dengan NoSQL menggunakan pemahaman yang kalian ketahui !
+
+Jawab :
+
+NoSQL merupakan jenis database yang non-relational, yang dimana data tidak disimpan sebagai tabel yang memiliki relasi seperti SQL (RDBMS).
+Sehingga, biasanya nyimpan data sebagai dokumen JSON, key-value, wide-column, atau graf yang skemanya lebih fleksibel (field bisabeda antar record).
+
+2. Jelaskan kapan harus menggunakan NoSQL dan Relational Database Management System !
+
+Jawab:
+
+Menggunakan NoSQL ketika:
+
+- Data semi-terstruktur/struktur sering berubah (seperti payload JSON, event log).
+
+- Throughput write/read sangat tinggi dan butuh scale out cepat.
+
+- Membutuhkan latency rendah untuk operasi sederhana (cache, session, leaderboard).
+
+- Konsistensi bisa disesuaikan (eventual consistency).
+
+Menggunakan RDBMS (Relational/SQL) ketika:
+
+- Data terstruktur dan relasi antar entitas jelas (Foreign Key, join).
+
+- Membutuhkan ACID kuat untuk transaksi konsisten (seperti finance, order, inventory).
+
+- Sering melakukan join/aggregasi kompleks dan ad-hoc query.
+
+- Ingin integritas data terjaga ketat melalui constraint, Primary Key/Foreign Key, dan sebagainya.
+
+3. Sebutkan contoh 2 tools/platform NoSQL selain ElasticSearch beserta keunggulan tools/platform tersebut !
+
+Jawab:
+
+MongoDB (Dokumen JSON)
+
+- Skema fleksibel, efektif buat data yang sering berubah field-nya.
+
+- Query kaya (aggregation pipeline), indexing bervariasi (TTL, text, geospasial).
+
+- Replikasi & sharding built-in, cocok untuk scale out.
+
+Apache Cassandra (Wide-Column)
+
+- Sangat kuat untuk write-heavy dan data besar, skalanya nyaris linear saat tambah node.
+
+- Menyediakan high availability tanpa single point of failure, serta multi-datacenter replication untuk ketahanan sistem.
+
+- Cocok untuk data time-series, log, dan IoT dengan beban tulis tinggi, mendukung TTL per kolom (auto-expire data lama).
+
+4. Jelaskan apa yang Anda ketahui dari Airflow menggunakan pemahaman dan bahasa Anda sendiri !
+
+Jawab:
+
+Apache Airflow merupakan orchestrator workflow data, yang dimana didefinisikan sebagai pipeline ETL (Extact Transform Load) menggunakan 
+DAG (Directed Acyclic Graph) yang terdiri atas serangkaian task yang punya depedensi. Airflow mengatur scheduling, eksekusi, retry, log,
+sampai backfill run historis.
+
+5. Jelaskan apa yang Anda ketahui dari Great Expectations menggunakan pemahaman dan bahasa Anda sendiri !
+
+Jawab:
+
+Great Expectations (GX) adalah framework validasi data, yang merupakan aturan kualitas data yang disebut expectations (seperti kolom harus unik, 
+dalam rentang tertentu, termasuk dalam daftar nilai, dll). Kemudian, dijalankan sebagai checkpoint dan hasilnya didokumentasikan di Data Docs (HTML report).
+
+6. Jelaskan apa yang Anda ketahui dari Batch Processing menggunakan pemahaman dan bahasa Anda sendiri (Definisi, Contoh Kasus Penggunaan, Tools, dll) !
+
+Jawab:
+
+Batch processing adalah cara mengolah data dalam kumpulan (batch) pada waktu tertentu, bukan diproses terus-menerus (real-time). Biasanya dipakai untuk ETL terjadwal,
+rekap periodik, billing bulanan, report harian, dan sebagainya. 
+
+Contoh di project saya: Scheduling setiap hari Sabtu 09:10–09:30 (cron). Alurnya dimulai dengan ekstrak data dari PostgreSQL, lalu dilakukan preprocessing (seperti drop duplikat,
+menormalisasi nama kolom, dan handling missing values)sebelum disimpan ke CSV. Setelah itu, data yang sudah bersih dikirim ke Elasticsearch sehingga dashboard Kibana otomatis terbarui.
