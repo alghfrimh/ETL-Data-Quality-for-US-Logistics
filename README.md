@@ -33,7 +33,7 @@ ETL-Data-Quality-for-US-Logistics
 ├── P2M3_muhammad_al_ghifari_ddl.txt             # SQL schema script
 ├── P2M3_muhammad_al_ghifari_GX.ipynb            # Great Expectations notebook
 ├── P2M3_muhammad_al_ghifari_GX_result.png       # GX validation result
-├── README.md                                    # Documentation
+└── README.md                                    # Documentation
 ```
 
 ## Problem Background
